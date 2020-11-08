@@ -1,0 +1,153 @@
+<section class="form-registro">
+    <h1 align="center">Registrar Personal</h1>
+    <section class="form-registro1">
+      <form [formGroup]= "formGroup">
+        <div class="col-xs-10 col-sm-8 col-md-8">
+          <div class="form-group row">
+              <label for="nombre" class="col-form-label col-sm-4">Identificacion:</label>
+            <div class="col-sm-8">
+              <input type="text"  name="identificacion" formControlName="identificacion" class="form-control"
+              [ngClass]="{ 'is-invalid':  control.identificacion.errors}" />
+
+                  <div *ngIf="control.identificacion.errors" class="invalid-feedback">
+                      <div *ngIf ="control.identificacion.errors.required">Se require la identificacion</div>
+                      </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="col-xs-10 col-sm-8 col-md-8">
+          <div class="form-group row">
+              <label for="nombre" class="col-form-label col-sm-4">Nombres:</label>
+            <div class="col-sm-8">
+          <input type="text" name="nombres" formControlName="nombres" class="form-control"
+            [ngClass]="{'is-invalid':control.nombres.errors}"/>
+            <div *ngIf="control.nombres.errors" class="invalid-feedback">
+              <div *ngIf ="control.nombres.errors.required">Se requiere el nombre</div>
+            </div>
+            </div>
+          </div>
+      </div>
+      
+      <div class="col-xs-10 col-sm-8 col-md-8">
+          <div class="form-group row">
+              <label for="nombre" class="col-form-label col-sm-4">Apellidos:</label>
+            <div class="col-sm-8">
+              <input type="text"  name="apellidos" formControlName="apellidos" class="form-control"
+              [ngClass]="{ 'is-invalid':  control.apellidos.errors}" />
+
+                  <div *ngIf="control.apellidos.errors" class="invalid-feedback">
+                      <div *ngIf ="control.apellidos.errors.required">Se require el apellido</div>
+                      </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="col-xs-10 col-sm-8 col-md-8">
+          <div class="form-group row">
+              <label for="nombre" class ="col-form-label col-sm-4">Edad:</label>
+            <div class="col-sm-8">
+              <input type="number"  name="edad" formControlName="edad" class="form-control" 
+              [ngClass]="{ 'is-invalid':  control.edad.errors}"/>
+
+              <div *ngIf="control.edad.errors" class="invalid-feedback">
+                  <div *ngIf="control.edad.errors.required">Se require la edad</div>
+                  </div>
+            </div>
+          </div>
+      </div>
+      
+      <div class="col-xs-10 col-sm-8 col-md-8">
+        <div class="form-group row">
+            <label for="nombre" class="col-form-label col-sm-4">Sexo:</label>
+          <div class="col-sm-8">
+            <input type ="text" name ="sexo" formControlName="sexo" class ="form-control"
+            [ngClass] ="{ 'is-invalid':  control.sexo.errors}" />
+
+            <div *ngIf="control.sexo.errors && formGroup.get('sexo')" class="invalid-feedback">
+                <div *ngIf="control.sexo.errors.required">Se require el sexo</div>
+                <div *ngIf="control.sexo.errors.validSexo">{{control.sexo.errors.messageSexo}}</div>
+              </div>
+          </div>
+        </div>
+    </div>
+      </form>
+    </section>
+       <button name="boton2" type="button" class="btn btn-danger  btn-block" (click)="onSubmit()" [disabled]="formGroup.invalid">Registrar</button>
+
+    <section class="form-registro2">
+      <form [formGroup]= "formGroup">
+
+        <div class="col-xs-10 col-sm-8 col-md-8">
+          <div class="form-group row">
+              <label for ="nombre" class="col-form-label col-sm-4">Telefono:</label>
+            <div class="col-sm-8">
+              <input type="text"  name="telefono" formControlName="telefono"  class="form-control"
+              [ngClass]="{ 'is-invalid': control.telefono.errors }" />
+
+              <div *ngIf="control.telefono.errors" class="invalid-feedback">
+              <div *ngIf="control.telefono.errors.required">Se require el telefono</div>
+              </div>
+            </div>
+          </div>
+      </div>  
+          <div class="col-xs-10 col-sm-8 col-md-8">
+              <div class="form-group row">
+                  <label for="nombre" class="col-form-label col-sm-4">E-mail:</label>
+                <div class="col-sm-8">
+                  <input type="text"  name="email" formControlName="email"  class="form-control"
+                  [ngClass]="{ 'is-invalid':  control.email.errors}" />
+
+                  <div *ngIf="control.email.errors" class="invalid-feedback">
+                  <div *ngIf="control.email.errors.required">Se require el email</div>
+                  </div>
+                </div>
+              </div>
+          </div>
+  
+          <div class="col-xs-10 col-sm-8 col-md-8">
+              <div class="form-group row">
+                  <label for="nombre" class="col-form-label col-sm-4">Estado Civil:</label>
+                <div class="col-sm-8">
+                  <input type="text"  name="estadoCivil" formControlName="estadoCivil"  class="form-control"
+                  [ngClass]="{ 'is-invalid':  control.estadoCivil.errors}" />
+
+                  <div *ngIf="control.estadoCivil.errors" class="invalid-feedback">
+                  <div *ngIf="control.estadoCivil.errors.required">Se require el estado civil</div>
+                  </div>
+                </div>
+              </div>
+          </div>
+  
+          <div class ="col-xs-10 col-sm-8 col-md-8">
+              <div class ="form-group row">
+                  <label for="nombre" class="col-form-label col-sm-4">Pais de Procedencia:</label>
+                <div class="col-sm-8">
+                  <input type="text"  name="paisProcedencia" formControlName="paisProcedencia"  class="form-control"
+                  [ngClass]="{ 'is-invalid':  control.paisProcedencia.errors}" />
+
+                  <div *ngIf="control.paisProcedencia.errors" class="invalid-feedback">
+                  <div *ngIf="control.paisProcedencia.errors.required">Se require el pais de procedencia</div>
+                  </div>
+                </div>
+              </div>
+          </div>
+  
+          <div class="col-xs-10 col-sm-8 col-md-8">
+              <div class ="form-group row">
+                  <label for="nombre" class="col-form-label col-sm-4">Nivel Educativo:</label>
+                <div class="col-sm-8">
+                  <input type="text"  name="nivelEducativo" formControlName="nivelEducativo"  class="form-control"
+                  [ngClass]="{ 'is-invalid':  control.nivelEducativo.errors}" />
+
+                  <div *ngIf="control.nivelEducativo.errors" class="invalid-feedback">
+                  <div *ngIf="control.nivelEducativo.errors.required">Se require el nivel educativo</div>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </form>
+
+       <button type="button" class="btn btn-danger btn-block" (click)="add()">Cancelar</button>
+    </section>
+</section>

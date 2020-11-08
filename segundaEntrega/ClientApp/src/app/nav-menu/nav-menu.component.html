@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Lateral</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+    <div class="Sidebar">
+        <div align="center">
+            <img src="../../assets/Imagenes/logo.png" class="profile_image" alt="" style="width: 100px; height: 100px;">
+            <h4>ADMINISTRADOR</h4>
+        </div>
+        <a [routerLink]='["/restaurantes"]'><i class="far fa-address-book"></i><span>Restaurantes</span></a>
+        <a [routerLink]='["/personal"]'><i class="far fa-address-book"></i><span>Personal</span></a>
+        <a [routerLink]='["/conocimientos"]'><i class="fas fa-tasks"></i><span>Conocimientos</span></a>
+        <a [routerLink]='["/actitudes"]'><i class="fas fa-utensils"></i><span>Actitudes</span></a>
+        <a [routerLink]='["/practicas"]'><i class="fas fa-building"></i><span>Practicas</span></a>
+        <a [routerLink]='["/examenes"]'><i class="fas fa-notes-medical"></i><span>Examenes</span></a>
+        <a [routerLink]='["/personaConsulta"]'><i class="fas fa-cog"></i><span>Configuracion</span></a>
+    </div>
+</body>
+</html>

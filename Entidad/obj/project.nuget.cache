@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "oG42yoOKIi0ExEs8pEHlQ3PLqY/hGXxX6BzOLuYMhVdT8dNLqJdn8sdB7ozFvyne1qXXbvbTG3ejWehv2Tjcrw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\HP\\Documents\\microAlParque\\Entidad\\Entidad.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

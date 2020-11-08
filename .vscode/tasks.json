@@ -1,0 +1,60 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build",
+			"path": "segundaEntrega/ClientApp/",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: build - segundaEntrega/ClientApp",
+			"detail": "ng build"
+		},
+		{
+			"type": "npm",
+			"script": "build:ssr",
+			"path": "segundaEntrega/ClientApp/",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: build:ssr - segundaEntrega/ClientApp",
+			"detail": "ng run segundaEntrega:server:dev"
+		},
+		{
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/segundaEntrega/segundaEntrega.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/segundaEntrega/segundaEntrega.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "${workspaceFolder}/segundaEntrega/segundaEntrega.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+	]
+}
